@@ -1,0 +1,11 @@
+columns:
+    - header: NAME
+      fieldSpec: $_defaultPrinterField
+    - header: MIN_AVAILABLE
+      fieldSpec: $_defaultPrinterField
+    - header: MAX_UNAVAILABLE
+      fieldSpec: $_defaultPrinterField
+    - header: ALLOWED_DISRUPTIONS
+      fieldSpec: $_defaultPrinterField
+    - header: AGE
+      fieldSpec: $_defaultPrinterField

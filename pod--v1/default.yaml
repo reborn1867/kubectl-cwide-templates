@@ -1,0 +1,19 @@
+columns:
+    - header: NAME
+      fieldSpec: $_defaultPrinterField
+    - header: READY
+      fieldSpec: $_defaultPrinterField
+    - header: STATUS
+      fieldSpec: $_defaultPrinterField
+    - header: RESTARTS
+      fieldSpec: $_defaultPrinterField
+    - header: AGE
+      fieldSpec: $_defaultPrinterField
+    - header: IP
+      fieldSpec: $_defaultPrinterField
+    - header: NODE
+      fieldSpec: $_defaultPrinterField
+    - header: NOMINATED_NODE
+      fieldSpec: $_defaultPrinterField
+    - header: READINESS_GATES
+      fieldSpec: $_defaultPrinterField

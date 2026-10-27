@@ -1,0 +1,9 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: ACCEPTED
+      fieldSpec: .status.ancestors[0].conditions[?(@.type=="Accepted")].status
+    - header: PROGRAMMED
+      fieldSpec: .status.ancestors[0].conditions[?(@.type=="Programmed")].status
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

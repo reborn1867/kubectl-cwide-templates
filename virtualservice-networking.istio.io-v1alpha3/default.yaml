@@ -1,0 +1,9 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: GATEWAYS
+      fieldSpec: .spec.gateways
+    - header: HOSTS
+      fieldSpec: .spec.hosts
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

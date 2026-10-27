@@ -1,0 +1,9 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: READY
+      fieldSpec: .status.ready
+    - header: VALUE
+      fieldSpec: .status.observation.latestValue
+    - header: OBSERVED
+      fieldSpec: .status.observation.timestamp

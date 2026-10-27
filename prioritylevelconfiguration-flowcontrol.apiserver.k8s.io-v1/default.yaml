@@ -1,0 +1,15 @@
+columns:
+    - header: NAME
+      fieldSpec: $_defaultPrinterField
+    - header: TYPE
+      fieldSpec: $_defaultPrinterField
+    - header: NOMINALCONCURRENCYSHARES
+      fieldSpec: $_defaultPrinterField
+    - header: QUEUES
+      fieldSpec: $_defaultPrinterField
+    - header: HANDSIZE
+      fieldSpec: $_defaultPrinterField
+    - header: QUEUELENGTHLIMIT
+      fieldSpec: $_defaultPrinterField
+    - header: AGE
+      fieldSpec: $_defaultPrinterField

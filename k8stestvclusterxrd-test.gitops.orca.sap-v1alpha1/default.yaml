@@ -1,0 +1,13 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: SYNCED
+      fieldSpec: .status.conditions[?(@.type=='Synced')].status
+    - header: READY
+      fieldSpec: .status.conditions[?(@.type=='Ready')].status
+    - header: COMPOSITION
+      fieldSpec: .spec.compositionRef.name
+    - header: COMPOSITIONREVISION
+      fieldSpec: .spec.compositionRevisionRef.name
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

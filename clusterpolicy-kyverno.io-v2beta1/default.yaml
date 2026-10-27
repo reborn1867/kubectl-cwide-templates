@@ -1,0 +1,23 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: ADMISSION
+      fieldSpec: .spec.admission
+    - header: BACKGROUND
+      fieldSpec: .spec.background
+    - header: READY
+      fieldSpec: .status.conditions[?(@.type == "Ready")].status
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp
+    - header: FAILURE POLICY
+      fieldSpec: .spec.failurePolicy
+    - header: VALIDATE
+      fieldSpec: .status.rulecount.validate
+    - header: MUTATE
+      fieldSpec: .status.rulecount.mutate
+    - header: GENERATE
+      fieldSpec: .status.rulecount.generate
+    - header: VERIFY IMAGES
+      fieldSpec: .status.rulecount.verifyimages
+    - header: MESSAGE
+      fieldSpec: .status.conditions[?(@.type == "Ready")].message

@@ -1,0 +1,15 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: STATE
+      fieldSpec: .status.state
+    - header: CLUSTER
+      fieldSpec: .spec.clusterID
+    - header: PLAN
+      fieldSpec: .spec.planName
+    - header: SPECVERSION
+      fieldSpec: .spec.version
+    - header: VERSION
+      fieldSpec: .status.version
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

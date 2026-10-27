@@ -1,0 +1,9 @@
+columns:
+  - header: NAME
+    fieldSpec: .metadata.name
+  - header: READY_PROBE
+    template: '{{ probeCheck . "readiness" }}'
+  - header: LIVE_PROBE
+    template: '{{ probeCheck . "liveness" }}'
+  - header: STARTUP_PROBE
+    template: '{{ probeCheck . "startup" }}'

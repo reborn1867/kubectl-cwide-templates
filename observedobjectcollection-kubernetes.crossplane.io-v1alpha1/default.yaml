@@ -1,0 +1,15 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: KIND
+      fieldSpec: .spec.kind
+    - header: APIVERSION
+      fieldSpec: .spec.apiVersion
+    - header: PROVIDERCONFIG
+      fieldSpec: .spec.providerConfigRef.name
+    - header: SYNCED
+      fieldSpec: .status.conditions[?(@.type=='Synced')].status
+    - header: READY
+      fieldSpec: .status.conditions[?(@.type=='Ready')].status
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

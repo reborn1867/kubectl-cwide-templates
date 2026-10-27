@@ -1,0 +1,19 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: KIND
+      fieldSpec: .scope.kind
+    - header: NAME
+      fieldSpec: .scope.name
+    - header: PASS
+      fieldSpec: .summary.pass
+    - header: FAIL
+      fieldSpec: .summary.fail
+    - header: WARN
+      fieldSpec: .summary.warn
+    - header: ERROR
+      fieldSpec: .summary.error
+    - header: SKIP
+      fieldSpec: .summary.skip
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

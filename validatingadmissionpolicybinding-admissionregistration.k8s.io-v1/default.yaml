@@ -1,0 +1,9 @@
+columns:
+    - header: NAME
+      fieldSpec: $_defaultPrinterField
+    - header: POLICYNAME
+      fieldSpec: $_defaultPrinterField
+    - header: PARAMREF
+      fieldSpec: $_defaultPrinterField
+    - header: AGE
+      fieldSpec: $_defaultPrinterField

@@ -1,0 +1,11 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: CLASS
+      fieldSpec: .spec.gatewayClassName
+    - header: ADDRESS
+      fieldSpec: .status.addresses[*].value
+    - header: PROGRAMMED
+      fieldSpec: .status.conditions[?(@.type=="Programmed")].status
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

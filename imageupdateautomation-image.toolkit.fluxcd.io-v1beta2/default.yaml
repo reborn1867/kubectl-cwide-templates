@@ -1,0 +1,11 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: READY
+      fieldSpec: .status.conditions[?(@.type=="Ready")].status
+    - header: STATUS
+      fieldSpec: .status.conditions[?(@.type=="Ready")].message
+    - header: LAST RUN
+      fieldSpec: .status.lastAutomationRunTime
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

@@ -1,0 +1,15 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: INSTANCE
+      fieldSpec: .spec.serviceInstanceName
+    - header: STATUS
+      fieldSpec: .status.conditions[0].reason
+    - header: READY
+      fieldSpec: .status.ready
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp
+    - header: ID
+      fieldSpec: .status.bindingID
+    - header: MESSAGE
+      fieldSpec: .status.conditions[0].message

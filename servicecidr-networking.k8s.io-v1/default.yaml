@@ -1,0 +1,7 @@
+columns:
+    - header: NAME
+      fieldSpec: $_defaultPrinterField
+    - header: CIDRS
+      fieldSpec: $_defaultPrinterField
+    - header: AGE
+      fieldSpec: $_defaultPrinterField

@@ -1,0 +1,13 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp
+    - header: SOURCE-KIND
+      fieldSpec: .spec.sourceRef.kind
+    - header: SOURCE
+      fieldSpec: .spec.sourceRef.name
+    - header: TARGET-KIND
+      fieldSpec: .spec.targetRef.kind
+    - header: TARGET
+      fieldSpec: .spec.targetRef.name

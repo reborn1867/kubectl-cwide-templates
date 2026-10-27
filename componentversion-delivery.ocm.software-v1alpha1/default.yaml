@@ -1,0 +1,11 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: READY
+      fieldSpec: .status.conditions[?(@.type=="Ready")].status
+    - header: VERSION
+      fieldSpec: .status.reconciledVersion
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp
+    - header: STATUS
+      fieldSpec: .status.conditions[?(@.type=="Ready")].message

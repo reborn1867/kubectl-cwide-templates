@@ -1,0 +1,13 @@
+columns:
+    - header: NAME
+      fieldSpec: $_defaultPrinterField
+    - header: ROLE
+      fieldSpec: $_defaultPrinterField
+    - header: AGE
+      fieldSpec: $_defaultPrinterField
+    - header: USERS
+      fieldSpec: $_defaultPrinterField
+    - header: GROUPS
+      fieldSpec: $_defaultPrinterField
+    - header: SERVICEACCOUNTS
+      fieldSpec: $_defaultPrinterField

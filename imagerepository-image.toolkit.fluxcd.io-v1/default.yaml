@@ -1,0 +1,15 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: IMAGE
+      fieldSpec: .spec.image
+    - header: TAGS
+      fieldSpec: .status.lastScanResult.tagCount
+    - header: READY
+      fieldSpec: .status.conditions[?(@.type=="Ready")].status
+    - header: STATUS
+      fieldSpec: .status.conditions[?(@.type=="Ready")].message
+    - header: LAST SCAN
+      fieldSpec: .status.lastScanResult.scanTime
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

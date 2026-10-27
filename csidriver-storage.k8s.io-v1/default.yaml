@@ -1,0 +1,17 @@
+columns:
+    - header: NAME
+      fieldSpec: $_defaultPrinterField
+    - header: ATTACHREQUIRED
+      fieldSpec: $_defaultPrinterField
+    - header: PODINFOONMOUNT
+      fieldSpec: $_defaultPrinterField
+    - header: STORAGECAPACITY
+      fieldSpec: $_defaultPrinterField
+    - header: TOKENREQUESTS
+      fieldSpec: $_defaultPrinterField
+    - header: REQUIRESREPUBLISH
+      fieldSpec: $_defaultPrinterField
+    - header: MODES
+      fieldSpec: $_defaultPrinterField
+    - header: AGE
+      fieldSpec: $_defaultPrinterField

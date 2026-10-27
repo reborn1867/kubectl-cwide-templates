@@ -1,0 +1,9 @@
+columns:
+  - header: NAME
+    fieldSpec: .metadata.name
+  - header: DEFAULT
+    fieldSpec: .status.workers.default
+  - header: DYNAMIC
+    fieldSpec: .status.workers.dynamic
+  - header: STATIC
+    fieldSpec: .status.workers.static

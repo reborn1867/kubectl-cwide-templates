@@ -1,0 +1,13 @@
+columns:
+    - header: NAME
+      fieldSpec: $_defaultPrinterField
+    - header: ATTACHER
+      fieldSpec: $_defaultPrinterField
+    - header: PV
+      fieldSpec: $_defaultPrinterField
+    - header: NODE
+      fieldSpec: $_defaultPrinterField
+    - header: ATTACHED
+      fieldSpec: $_defaultPrinterField
+    - header: AGE
+      fieldSpec: $_defaultPrinterField

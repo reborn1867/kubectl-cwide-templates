@@ -1,0 +1,15 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: SERVICE
+      fieldSpec: .spec.parameters.serviceName
+    - header: CLUSTER
+      fieldSpec: .spec.parameters.cluster
+    - header: SYNCED
+      fieldSpec: .status.conditions[?(@.type=='Synced')].status
+    - header: READY
+      fieldSpec: .status.conditions[?(@.type=='Ready')].status
+    - header: CONNECTION-SECRET
+      fieldSpec: .spec.writeConnectionSecretToRef.name
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

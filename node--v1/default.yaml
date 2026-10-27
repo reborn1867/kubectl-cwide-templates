@@ -1,0 +1,21 @@
+columns:
+    - header: NAME
+      fieldSpec: $_defaultPrinterField
+    - header: STATUS
+      fieldSpec: $_defaultPrinterField
+    - header: ROLES
+      fieldSpec: $_defaultPrinterField
+    - header: AGE
+      fieldSpec: $_defaultPrinterField
+    - header: VERSION
+      fieldSpec: $_defaultPrinterField
+    - header: INTERNAL-IP
+      fieldSpec: $_defaultPrinterField
+    - header: EXTERNAL-IP
+      fieldSpec: $_defaultPrinterField
+    - header: OS-IMAGE
+      fieldSpec: $_defaultPrinterField
+    - header: KERNEL-VERSION
+      fieldSpec: $_defaultPrinterField
+    - header: CONTAINER-RUNTIME
+      fieldSpec: $_defaultPrinterField

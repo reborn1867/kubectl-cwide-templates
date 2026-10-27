@@ -1,0 +1,15 @@
+columns:
+  - header: NAME
+    fieldSpec: .metadata.name
+  - header: SPEC-VERSION
+    fieldSpec: .spec.datahub.version
+  - header: CURRENT-VERSION
+    fieldSpec: .status.datahubVersion
+  - header: TENANT_STATS
+    template: '{{- $ready := .status.tenantStats.ready | int | default 0 -}}{{- $total := .status.tenantStats.total | int | default 0 -}}{{- printf "%d/%d" $ready $total -}}'
+  - header: STAGE
+    fieldSpec: .status.lastMessage
+  - header: PROGRESS
+    template: '{{ progressBar .status.tenantStats.ready .status.tenantStats.total }}'
+  - header: RMS_QUOTA
+    template: '{{- $clusterName := .metadata.name -}}{{- $tenants := lookupByLabel "dis.datahub.sap.com/v1alpha1" "Tenant" "" (printf "cluster.dis.datahub.sap.com/instance-name=%s" $clusterName) -}}{{- $sum := 0 -}}{{- range $tenants.items -}}{{- if .spec.rmsQuotas -}}{{- $sum = add $sum (.spec.rmsQuotas.podCount | int | default 0) -}}{{- end -}}{{- end -}}{{- $sum -}}'

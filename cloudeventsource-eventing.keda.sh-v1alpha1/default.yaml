@@ -1,0 +1,5 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: ACTIVE
+      fieldSpec: .status.conditions[?(@.type=="Active")].status

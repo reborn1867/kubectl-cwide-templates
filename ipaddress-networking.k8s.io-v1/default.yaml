@@ -1,0 +1,5 @@
+columns:
+    - header: NAME
+      fieldSpec: $_defaultPrinterField
+    - header: PARENTREF
+      fieldSpec: $_defaultPrinterField

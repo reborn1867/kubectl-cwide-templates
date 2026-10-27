@@ -1,0 +1,15 @@
+columns:
+    - header: NAME
+      fieldSpec: $_defaultPrinterField
+    - header: REFERENCE
+      fieldSpec: $_defaultPrinterField
+    - header: TARGETS
+      fieldSpec: $_defaultPrinterField
+    - header: MINPODS
+      fieldSpec: $_defaultPrinterField
+    - header: MAXPODS
+      fieldSpec: $_defaultPrinterField
+    - header: REPLICAS
+      fieldSpec: $_defaultPrinterField
+    - header: AGE
+      fieldSpec: $_defaultPrinterField

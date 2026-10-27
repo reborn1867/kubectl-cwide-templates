@@ -1,0 +1,11 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: STATE
+      fieldSpec: .status.state
+    - header: INSTANCE_NAME
+      fieldSpec: .spec.serviceInstanceName
+    - header: INSTANCE_ID
+      fieldSpec: .status.instanceID
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

@@ -1,0 +1,23 @@
+columns:
+    - header: NAME
+      fieldSpec: $_defaultPrinterField
+    - header: CAPACITY
+      fieldSpec: $_defaultPrinterField
+    - header: ACCESS_MODES
+      fieldSpec: $_defaultPrinterField
+    - header: RECLAIM_POLICY
+      fieldSpec: $_defaultPrinterField
+    - header: STATUS
+      fieldSpec: $_defaultPrinterField
+    - header: CLAIM
+      fieldSpec: $_defaultPrinterField
+    - header: STORAGECLASS
+      fieldSpec: $_defaultPrinterField
+    - header: VOLUMEATTRIBUTESCLASS
+      fieldSpec: $_defaultPrinterField
+    - header: REASON
+      fieldSpec: $_defaultPrinterField
+    - header: AGE
+      fieldSpec: $_defaultPrinterField
+    - header: VOLUMEMODE
+      fieldSpec: $_defaultPrinterField

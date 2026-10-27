@@ -1,0 +1,5 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

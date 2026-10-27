@@ -1,0 +1,17 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: HEALTHY
+      fieldSpec: .status.conditions[?(@.type=='Healthy')].status
+    - header: REVISION
+      fieldSpec: .spec.revision
+    - header: IMAGE
+      fieldSpec: .spec.image
+    - header: STATE
+      fieldSpec: .spec.desiredState
+    - header: DEP-FOUND
+      fieldSpec: .status.foundDependencies
+    - header: DEP-INSTALLED
+      fieldSpec: .status.installedDependencies
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

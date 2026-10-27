@@ -1,0 +1,15 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: CERTIFICATE
+      fieldSpec: .spec.certificateRef.name
+    - header: STATUS
+      fieldSpec: .status.state
+    - header: REVOKED_AT
+      fieldSpec: .status.revocationApplied
+    - header: RENEW
+      fieldSpec: .spec.renew
+    - header: QUALIFIED_AT
+      fieldSpec: .spec.qualifyingDate
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

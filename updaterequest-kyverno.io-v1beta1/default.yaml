@@ -1,0 +1,19 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: POLICY
+      fieldSpec: .spec.policy
+    - header: RULE
+      fieldSpec: .spec.rule
+    - header: RULETYPE
+      fieldSpec: .spec.requestType
+    - header: RESOURCEKIND
+      fieldSpec: .spec.resource.kind
+    - header: RESOURCENAME
+      fieldSpec: .spec.resource.name
+    - header: RESOURCENAMESPACE
+      fieldSpec: .spec.resource.namespace
+    - header: STATUS
+      fieldSpec: .status.state
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

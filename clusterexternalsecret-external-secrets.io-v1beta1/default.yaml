@@ -1,0 +1,9 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: STORE
+      fieldSpec: .spec.externalSecretSpec.secretStoreRef.name
+    - header: REFRESH INTERVAL
+      fieldSpec: .spec.refreshTime
+    - header: READY
+      fieldSpec: .status.conditions[?(@.type=="Ready")].status

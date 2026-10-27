@@ -1,0 +1,17 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: MODE
+      fieldSpec: .spec.updatePolicy.updateMode
+    - header: CPU
+      fieldSpec: .status.recommendation.containerRecommendations[0].target.cpu
+    - header: MEM
+      fieldSpec: .status.recommendation.containerRecommendations[0].target.memory
+    - header: PROVIDED
+      fieldSpec: .status.conditions[?(@.type=='RecommendationProvided')].status
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp
+    - header: MINREPLICAS
+      fieldSpec: .spec.updatePolicy.minReplicas
+    - header: OOMSECONDS
+      fieldSpec: .spec.updatePolicy.evictAfterOOMSeconds

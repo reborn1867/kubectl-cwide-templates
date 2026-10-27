@@ -1,0 +1,13 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: IMAGE
+      fieldSpec: .status.latestRef.name
+    - header: TAG
+      fieldSpec: .status.latestRef.tag
+    - header: READY
+      fieldSpec: .status.conditions[?(@.type=="Ready")].status
+    - header: STATUS
+      fieldSpec: .status.conditions[?(@.type=="Ready")].message
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

@@ -1,0 +1,15 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: ISSUER
+      fieldSpec: .spec.issuerURL
+    - header: CLIENT ID
+      fieldSpec: .spec.clientID
+    - header: AUDIENCES
+      fieldSpec: .spec.audiences
+    - header: USERNAME CLAIM
+      fieldSpec: .spec.usernameClaim
+    - header: GROUPS CLAIM
+      fieldSpec: .spec.groupsClaim
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

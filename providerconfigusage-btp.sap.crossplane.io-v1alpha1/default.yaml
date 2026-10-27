@@ -1,0 +1,11 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp
+    - header: CONFIG-NAME
+      fieldSpec: .providerConfigRef.name
+    - header: RESOURCE-KIND
+      fieldSpec: .resourceRef.kind
+    - header: RESOURCE-NAME
+      fieldSpec: .resourceRef.name

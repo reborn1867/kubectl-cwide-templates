@@ -1,0 +1,15 @@
+columns:
+    - header: NAME
+      fieldSpec: $_defaultPrinterField
+    - header: TYPE
+      fieldSpec: $_defaultPrinterField
+    - header: CLUSTER-IP
+      fieldSpec: $_defaultPrinterField
+    - header: EXTERNAL-IP
+      fieldSpec: $_defaultPrinterField
+    - header: PORT(S)
+      fieldSpec: $_defaultPrinterField
+    - header: AGE
+      fieldSpec: $_defaultPrinterField
+    - header: SELECTOR
+      fieldSpec: $_defaultPrinterField

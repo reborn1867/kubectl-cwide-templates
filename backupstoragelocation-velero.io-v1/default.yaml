@@ -1,0 +1,11 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: PHASE
+      fieldSpec: .status.phase
+    - header: LAST VALIDATED
+      fieldSpec: .status.lastValidationTime
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp
+    - header: DEFAULT
+      fieldSpec: .spec.default

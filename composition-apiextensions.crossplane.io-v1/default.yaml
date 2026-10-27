@@ -1,0 +1,9 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: XR-KIND
+      fieldSpec: .spec.compositeTypeRef.kind
+    - header: XR-APIVERSION
+      fieldSpec: .spec.compositeTypeRef.apiVersion
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

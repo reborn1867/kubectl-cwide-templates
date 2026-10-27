@@ -1,0 +1,9 @@
+columns:
+    - header: NAME
+      fieldSpec: $_defaultPrinterField
+    - header: CONTAINERS
+      fieldSpec: $_defaultPrinterField
+    - header: IMAGES
+      fieldSpec: $_defaultPrinterField
+    - header: POD_LABELS
+      fieldSpec: $_defaultPrinterField

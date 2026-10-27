@@ -1,0 +1,9 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: EXTERNAL DOMAIN
+      fieldSpec: .spec.externalDomain
+    - header: STATE
+      fieldSpec: .status.state
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

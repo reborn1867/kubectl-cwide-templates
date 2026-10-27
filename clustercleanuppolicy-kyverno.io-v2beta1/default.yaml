@@ -1,0 +1,7 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: SCHEDULE
+      fieldSpec: .spec.schedule
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

@@ -1,0 +1,54 @@
+columns:
+  - header: NAME
+    fieldSpec: $_defaultPrinterField
+  - header: STATUS
+    fieldSpec: $_defaultPrinterField
+  - header: AGE
+    fieldSpec: $_defaultPrinterField
+  - header: CONDITION
+    template: '{{ template "Conditions" . }}'
+  - header: STATE
+    template: '{{ template "ConditionStatus" . }}'
+  - header: REASON
+    template: '{{ template "ConditionReason" . }}'
+helpers: |
+  {{- define "Conditions" -}}
+    {{- $conditions := .status.conditions -}}
+    {{- if $conditions -}}
+      {{- $types := list -}}
+      {{- range $conditions -}}
+        {{- $types = append $types (printf "%s" .type) -}}
+      {{- end -}}
+      {{- join "\n" $types -}}
+    {{- else -}}
+      <none>
+    {{- end -}}
+  {{- end -}}
+  {{- define "ConditionStatus" -}}
+    {{- $conditions := .status.conditions -}}
+    {{- if $conditions -}}
+      {{- $statuses := list -}}
+      {{- range $conditions -}}
+        {{- $statuses = append $statuses (printf "%s" .status) -}}
+      {{- end -}}
+      {{- join "\n" $statuses -}}
+    {{- else -}}
+      <none>
+    {{- end -}}
+  {{- end -}}
+  {{- define "ConditionReason" -}}
+    {{- $conditions := .status.conditions -}}
+    {{- if $conditions -}}
+      {{- $reasons := list -}}
+      {{- range $conditions -}}
+        {{- if .reason -}}
+          {{- $reasons = append $reasons (printf "%s" .reason) -}}
+        {{- else -}}
+          {{- $reasons = append $reasons "-" -}}
+        {{- end -}}
+      {{- end -}}
+      {{- join "\n" $reasons -}}
+    {{- else -}}
+      <none>
+    {{- end -}}
+  {{- end -}}

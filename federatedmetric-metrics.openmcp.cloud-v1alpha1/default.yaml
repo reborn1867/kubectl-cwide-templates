@@ -1,0 +1,3 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name

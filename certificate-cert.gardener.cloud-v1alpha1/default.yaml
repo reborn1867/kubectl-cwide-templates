@@ -1,0 +1,17 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: COMMON NAME
+      fieldSpec: .status.commonName
+    - header: ISSUER
+      fieldSpec: .status.issuerRef.name
+    - header: STATUS
+      fieldSpec: .status.state
+    - header: ISSUANCE_DATE
+      fieldSpec: .status.issuanceDate
+    - header: EXPIRATION_DATE
+      fieldSpec: .status.expirationDate
+    - header: DNS_NAMES
+      fieldSpec: .status.dnsNames
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

@@ -1,0 +1,11 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: CONTROLLER
+      fieldSpec: .spec.controllerName
+    - header: ACCEPTED
+      fieldSpec: .status.conditions[?(@.type=="Accepted")].status
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp
+    - header: DESCRIPTION
+      fieldSpec: .spec.description

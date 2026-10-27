@@ -1,0 +1,21 @@
+columns:
+    - header: NAME
+      fieldSpec: $_defaultPrinterField
+    - header: SCHEDULE
+      fieldSpec: $_defaultPrinterField
+    - header: TIMEZONE
+      fieldSpec: $_defaultPrinterField
+    - header: SUSPEND
+      fieldSpec: $_defaultPrinterField
+    - header: ACTIVE
+      fieldSpec: $_defaultPrinterField
+    - header: LAST_SCHEDULE
+      fieldSpec: $_defaultPrinterField
+    - header: AGE
+      fieldSpec: $_defaultPrinterField
+    - header: CONTAINERS
+      fieldSpec: $_defaultPrinterField
+    - header: IMAGES
+      fieldSpec: $_defaultPrinterField
+    - header: SELECTOR
+      fieldSpec: $_defaultPrinterField

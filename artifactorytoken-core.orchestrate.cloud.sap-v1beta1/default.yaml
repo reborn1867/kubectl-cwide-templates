@@ -1,0 +1,13 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: READY
+      fieldSpec: .status.conditions[?(@.type=='Ready')].status
+    - header: SYNCED
+      fieldSpec: .status.conditions[?(@.type=='Synced')].status
+    - header: ROOT-TOKEN
+      fieldSpec: .spec.rootTokenRef.name
+    - header: DESTINATION-SECRET
+      fieldSpec: .spec.destinationSecretRef.name
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

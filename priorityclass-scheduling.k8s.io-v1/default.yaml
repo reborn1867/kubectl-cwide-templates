@@ -1,0 +1,11 @@
+columns:
+    - header: NAME
+      fieldSpec: $_defaultPrinterField
+    - header: VALUE
+      fieldSpec: $_defaultPrinterField
+    - header: GLOBAL-DEFAULT
+      fieldSpec: $_defaultPrinterField
+    - header: AGE
+      fieldSpec: $_defaultPrinterField
+    - header: PREEMPTIONPOLICY
+      fieldSpec: $_defaultPrinterField

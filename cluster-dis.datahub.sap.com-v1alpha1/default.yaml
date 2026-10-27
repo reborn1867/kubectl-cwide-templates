@@ -1,0 +1,21 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: CLUSTER-GROUP
+      fieldSpec: .metadata.labels.dis\.datahub\.sap\.com/cluster-group
+    - header: SHOOT
+      fieldSpec: .spec.shootName
+    - header: SPEC-VERSION
+      fieldSpec: .spec.datahub.version
+    - header: CURRENT-VERSION
+      fieldSpec: .status.datahubVersion
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp
+    - header: STAGE
+      fieldSpec: .status.lastMessage
+    - header: STAGE-INFO
+      fieldSpec: .status.lastStageDetails.reason
+    - header: HEALTHY
+      fieldSpec: .status.conditions[?(@.type=="WorkloadClusterHealth")].status
+    - header: COMMENT
+      fieldSpec: .metadata.annotations.cluster\.dis\.datahub\.sap\.com/user-comment

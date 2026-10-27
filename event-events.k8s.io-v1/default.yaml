@@ -1,0 +1,21 @@
+columns:
+    - header: LAST_SEEN
+      fieldSpec: $_defaultPrinterField
+    - header: TYPE
+      fieldSpec: $_defaultPrinterField
+    - header: REASON
+      fieldSpec: $_defaultPrinterField
+    - header: OBJECT
+      fieldSpec: $_defaultPrinterField
+    - header: SUBOBJECT
+      fieldSpec: $_defaultPrinterField
+    - header: SOURCE
+      fieldSpec: $_defaultPrinterField
+    - header: MESSAGE
+      fieldSpec: $_defaultPrinterField
+    - header: FIRST_SEEN
+      fieldSpec: $_defaultPrinterField
+    - header: COUNT
+      fieldSpec: $_defaultPrinterField
+    - header: NAME
+      fieldSpec: $_defaultPrinterField

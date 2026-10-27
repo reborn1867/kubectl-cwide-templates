@@ -1,0 +1,7 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp
+    - header: READY
+      fieldSpec: .status.conditionStatus.ready

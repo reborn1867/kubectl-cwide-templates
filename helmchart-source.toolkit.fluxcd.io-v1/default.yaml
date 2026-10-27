@@ -1,0 +1,17 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: CHART
+      fieldSpec: .spec.chart
+    - header: VERSION
+      fieldSpec: .spec.version
+    - header: SOURCE KIND
+      fieldSpec: .spec.sourceRef.kind
+    - header: SOURCE NAME
+      fieldSpec: .spec.sourceRef.name
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp
+    - header: READY
+      fieldSpec: .status.conditions[?(@.type=="Ready")].status
+    - header: STATUS
+      fieldSpec: .status.conditions[?(@.type=="Ready")].message

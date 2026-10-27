@@ -1,0 +1,9 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: DETAILS
+      fieldSpec: .metadata.annotations.crossplane\.io/usage-details
+    - header: READY
+      fieldSpec: .status.conditions[?(@.type=='Ready')].status
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

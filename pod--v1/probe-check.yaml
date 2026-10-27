@@ -1,0 +1,17 @@
+columns:
+  - header: NAME
+    fieldSpec: $_defaultPrinterField
+  - header: READY
+    fieldSpec: $_defaultPrinterField
+  - header: STATUS
+    fieldSpec: $_defaultPrinterField
+  - header: RESTARTS
+    fieldSpec: $_defaultPrinterField
+  - header: AGE
+    fieldSpec: $_defaultPrinterField
+  - header: READINESS
+    template: '{{ probeCheck . "readiness" }}'
+  - header: LIVENESS
+    template: '{{ probeCheck . "liveness" }}'
+  - header: STARTUP
+    template: '{{ probeCheck . "startup" }}'

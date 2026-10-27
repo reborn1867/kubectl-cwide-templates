@@ -1,0 +1,15 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: TYPE
+      fieldSpec: .spec.type
+    - header: STATUS
+      fieldSpec: .status.state
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp
+    - header: INCLUDED_DOMAINS
+      fieldSpec: .status.domains.included
+    - header: INCLUDED_ZONES
+      fieldSpec: .status.zones.included
+    - header: MESSAGE
+      fieldSpec: .status.message

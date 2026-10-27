@@ -1,0 +1,9 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: CLUSTER
+      fieldSpec: .spec.backedUpClusterName
+    - header: STATE
+      fieldSpec: .status.state
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

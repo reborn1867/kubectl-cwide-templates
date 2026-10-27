@@ -1,0 +1,13 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: READY
+      fieldSpec: .status.conditions[?(@.type=="Ready")].status
+    - header: SECRET
+      fieldSpec: .spec.secretName
+    - header: ISSUER
+      fieldSpec: .spec.issuerRef.name
+    - header: STATUS
+      fieldSpec: .status.conditions[?(@.type=="Ready")].message
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

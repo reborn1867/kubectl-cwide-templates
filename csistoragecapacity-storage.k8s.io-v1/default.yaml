@@ -1,0 +1,7 @@
+columns:
+    - header: NAME
+      fieldSpec: $_defaultPrinterField
+    - header: STORAGECLASSNAME
+      fieldSpec: $_defaultPrinterField
+    - header: CAPACITY
+      fieldSpec: $_defaultPrinterField

@@ -1,0 +1,11 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: VERSION
+      fieldSpec: .spec.template.spec.datahub.version
+    - header: READY_REPLICAS
+      fieldSpec: .status.readyReplicas
+    - header: REPLICAS
+      fieldSpec: .status.replicas
+    - header: REASON
+      fieldSpec: .status.reason

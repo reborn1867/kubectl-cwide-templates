@@ -1,0 +1,11 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: READY
+      fieldSpec: .status.conditions[?(@.type=='Ready')].status
+    - header: SYNCED
+      fieldSpec: .status.conditions[?(@.type=='Synced')].status
+    - header: EXTERNAL-NAME
+      fieldSpec: .metadata.annotations.crossplane\.io/external-name
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

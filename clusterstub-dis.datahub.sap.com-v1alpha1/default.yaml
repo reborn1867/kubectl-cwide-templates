@@ -1,0 +1,17 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: CLUSTER-GROUP
+      fieldSpec: .metadata.labels.cluster-group\.dis\.datahub\.sap\.com/name
+    - header: CLUSTER
+      fieldSpec: .metadata.labels.cluster\.dis\.datahub\.sap\.com/instance-name
+    - header: SHOOT
+      fieldSpec: .spec.shootName
+    - header: SPEC-VERSION
+      fieldSpec: .spec.datahubVersion
+    - header: CURRENT-VERSION
+      fieldSpec: .status.datahubVersion
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp
+    - header: COMMENT
+      fieldSpec: .metadata.annotations.cluster\.dis\.datahub\.sap\.com/user-comment

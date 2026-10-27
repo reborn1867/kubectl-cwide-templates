@@ -1,0 +1,21 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: OFFERING
+      fieldSpec: .spec.serviceOfferingName
+    - header: PLAN
+      fieldSpec: .spec.servicePlanName
+    - header: SHARED
+      fieldSpec: .spec.shared
+    - header: DATACENTER
+      fieldSpec: .spec.dataCenter
+    - header: STATUS
+      fieldSpec: .status.conditions[0].reason
+    - header: READY
+      fieldSpec: .status.ready
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp
+    - header: ID
+      fieldSpec: .status.instanceID
+    - header: MESSAGE
+      fieldSpec: .status.conditions[0].message

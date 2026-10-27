@@ -1,0 +1,9 @@
+columns:
+    - header: NAME
+      fieldSpec: $_defaultPrinterField
+    - header: STATUS
+      fieldSpec: $_defaultPrinterField
+    - header: MESSAGE
+      fieldSpec: $_defaultPrinterField
+    - header: ERROR
+      fieldSpec: $_defaultPrinterField

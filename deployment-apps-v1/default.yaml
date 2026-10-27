@@ -1,0 +1,17 @@
+columns:
+    - header: NAME
+      fieldSpec: $_defaultPrinterField
+    - header: READY
+      fieldSpec: $_defaultPrinterField
+    - header: UP-TO-DATE
+      fieldSpec: $_defaultPrinterField
+    - header: AVAILABLE
+      fieldSpec: $_defaultPrinterField
+    - header: AGE
+      fieldSpec: $_defaultPrinterField
+    - header: CONTAINERS
+      fieldSpec: $_defaultPrinterField
+    - header: IMAGES
+      fieldSpec: $_defaultPrinterField
+    - header: SELECTOR
+      fieldSpec: $_defaultPrinterField

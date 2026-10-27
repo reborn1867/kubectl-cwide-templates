@@ -1,0 +1,9 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp
+    - header: TYPE
+      fieldSpec: .spec.type
+    - header: DEFAULT-SCOPE
+      fieldSpec: .spec.defaultScope

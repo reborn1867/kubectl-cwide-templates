@@ -1,0 +1,27 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: DNS
+      fieldSpec: .spec.dnsName
+    - header: TYPE
+      fieldSpec: .status.providerType
+    - header: PROVIDER
+      fieldSpec: .status.provider
+    - header: STATUS
+      fieldSpec: .status.state
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp
+    - header: TARGETS
+      fieldSpec: .status.targets
+    - header: TTL
+      fieldSpec: .status.ttl
+    - header: ZONE
+      fieldSpec: .status.zone
+    - header: POLICY_TYPE
+      fieldSpec: .status.routingPolicy.type
+    - header: POLICY_SETID
+      fieldSpec: .status.routingPolicy.setIdentifier
+    - header: POLICY_PARAMS
+      fieldSpec: .status.routingPolicy.parameters
+    - header: MESSAGE
+      fieldSpec: .status.message

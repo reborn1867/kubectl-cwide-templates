@@ -1,0 +1,11 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: INSTALLED
+      fieldSpec: .status.conditions[?(@.type=='Installed')].status
+    - header: HEALTHY
+      fieldSpec: .status.conditions[?(@.type=='Healthy')].status
+    - header: PACKAGE
+      fieldSpec: .spec.package
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

@@ -1,0 +1,17 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: VERSION
+      fieldSpec: .spec.version
+    - header: DESIRED
+      fieldSpec: .spec.replicas
+    - header: READY
+      fieldSpec: .status.availableReplicas
+    - header: RECONCILED
+      fieldSpec: .status.conditions[?(@.type == 'Reconciled')].status
+    - header: AVAILABLE
+      fieldSpec: .status.conditions[?(@.type == 'Available')].status
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp
+    - header: PAUSED
+      fieldSpec: .status.paused

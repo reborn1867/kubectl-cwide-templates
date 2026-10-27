@@ -1,0 +1,83 @@
+columns:
+  - header: NAMESPACE
+    fieldSpec: .metadata.namespace
+  - header: NAME
+    fieldSpec: .metadata.name
+  - header: PHASE
+    fieldSpec: .status.phase
+  - header: CONTAINER
+    template: |
+      {{- $initSt := default (list) .status.initContainerStatuses -}}
+      {{- $appSt  := default (list) .status.containerStatuses -}}
+      {{- $ephSt  := default (list) .status.ephemeralContainerStatuses -}}
+      {{- $inits  := default (list) .spec.initContainers -}}
+      {{- $apps   := default (list) .spec.containers -}}
+      {{- $ephs   := default (list) .spec.ephemeralContainers -}}
+      {{- $all := concat (toStrings (list)) (list) -}}
+      {{- $rows := list -}}
+      {{- range $inits -}}{{- $rows = append $rows (dict "c" . "type" "init" "statuses" $initSt) -}}{{- end -}}
+      {{- range $apps  -}}{{- $rows = append $rows (dict "c" . "type" "app"  "statuses" $appSt)  -}}{{- end -}}
+      {{- range $ephs  -}}{{- $rows = append $rows (dict "c" . "type" "eph"  "statuses" $ephSt)  -}}{{- end -}}
+      {{- $last := sub (len $rows) 1 -}}
+      {{- range $i, $row := $rows -}}
+        {{- $c := $row.c -}}
+        {{- $s := "" -}}
+        {{- range $row.statuses -}}{{- if eq .name $c.name -}}{{- $s = . -}}{{- end -}}{{- end -}}
+        {{- $branch := "├─" -}}{{- if eq $i $last -}}{{- $branch = "└─" -}}{{- end -}}
+        {{- $ready := "?" -}}
+        {{- if $s -}}
+          {{- if $s.ready -}}{{- $ready = "✔" -}}
+          {{- else -}}{{- $ready = "✘" -}}{{- end -}}
+        {{- end -}}
+        {{- $label := "" -}}
+        {{- if eq $row.type "init" -}}{{- $label = "[init]" -}}
+        {{- else if eq $row.type "eph" -}}{{- $label = "[eph]" -}}{{- end -}}
+        {{- if $i }}
+      {{ end -}}
+      {{- $branch }} {{ $ready }} {{ if $label }}{{ $label }} {{ end }}{{ $c.name -}}
+      {{- end -}}
+  - header: STATE
+    template: |
+      {{- $initSt := default (list) .status.initContainerStatuses -}}
+      {{- $appSt  := default (list) .status.containerStatuses -}}
+      {{- $ephSt  := default (list) .status.ephemeralContainerStatuses -}}
+      {{- $inits  := default (list) .spec.initContainers -}}
+      {{- $apps   := default (list) .spec.containers -}}
+      {{- $ephs   := default (list) .spec.ephemeralContainers -}}
+      {{- $rows := list -}}
+      {{- range $inits -}}{{- $rows = append $rows (dict "c" . "statuses" $initSt) -}}{{- end -}}
+      {{- range $apps  -}}{{- $rows = append $rows (dict "c" . "statuses" $appSt)  -}}{{- end -}}
+      {{- range $ephs  -}}{{- $rows = append $rows (dict "c" . "statuses" $ephSt)  -}}{{- end -}}
+      {{- range $i, $row := $rows -}}
+        {{- $c := $row.c -}}
+        {{- $s := "" -}}
+        {{- range $row.statuses -}}{{- if eq .name $c.name -}}{{- $s = . -}}{{- end -}}{{- end -}}
+        {{- $state := "unknown" -}}
+        {{- if $s -}}
+          {{- if $s.state.running -}}{{- $state = "Running" -}}
+          {{- else if $s.state.waiting -}}{{- $state = printf "Waiting:%s" $s.state.waiting.reason -}}
+          {{- else if $s.state.terminated -}}{{- $state = printf "Exit:%s" $s.state.terminated.reason -}}
+          {{- end -}}
+        {{- end -}}
+        {{- if $i }}
+      {{ end -}}
+      {{- $state -}}
+      {{- end -}}
+  - header: IMAGE
+    template: |
+      {{- $inits := default (list) .spec.initContainers -}}
+      {{- $apps  := default (list) .spec.containers -}}
+      {{- $ephs  := default (list) .spec.ephemeralContainers -}}
+      {{- $rows := list -}}
+      {{- range $inits -}}{{- $rows = append $rows . -}}{{- end -}}
+      {{- range $apps  -}}{{- $rows = append $rows . -}}{{- end -}}
+      {{- range $ephs  -}}{{- $rows = append $rows . -}}{{- end -}}
+      {{- range $i, $c := $rows -}}
+        {{- if $i }}
+      {{ end -}}
+      {{- $c.image -}}
+      {{- end -}}
+  - header: RESTARTS
+    template: '{{- $n := 0 -}}{{- range .status.containerStatuses -}}{{- $n = add $n .restartCount -}}{{- end -}}{{ $n }}'
+  - header: AGE
+    fieldSpec: .metadata.creationTimestamp

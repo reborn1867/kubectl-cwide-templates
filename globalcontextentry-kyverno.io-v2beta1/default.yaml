@@ -1,0 +1,9 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp
+    - header: REFRESH INTERVAL
+      fieldSpec: .spec.apiCall.refreshInterval
+    - header: LAST REFRESH
+      fieldSpec: .status.lastRefreshTime

@@ -1,0 +1,15 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: SERVER
+      fieldSpec: .spec.acme.server
+    - header: EMAIL
+      fieldSpec: .spec.acme.email
+    - header: STATUS
+      fieldSpec: .status.state
+    - header: TYPE
+      fieldSpec: .status.type
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp
+    - header: INCLUDED_DOMAINS
+      fieldSpec: .spec.acme.domains.include

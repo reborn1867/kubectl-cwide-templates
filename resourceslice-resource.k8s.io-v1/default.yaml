@@ -1,0 +1,11 @@
+columns:
+    - header: NAME
+      fieldSpec: $_defaultPrinterField
+    - header: NODE
+      fieldSpec: $_defaultPrinterField
+    - header: DRIVER
+      fieldSpec: $_defaultPrinterField
+    - header: POOL
+      fieldSpec: $_defaultPrinterField
+    - header: AGE
+      fieldSpec: $_defaultPrinterField

@@ -1,0 +1,19 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: KIND
+      fieldSpec: .spec.forProvider.manifest.kind
+    - header: APIVERSION
+      fieldSpec: .spec.forProvider.manifest.apiVersion
+    - header: METANAME
+      fieldSpec: .spec.forProvider.manifest.metadata.name
+    - header: METANAMESPACE
+      fieldSpec: .spec.forProvider.manifest.metadata.namespace
+    - header: PROVIDERCONFIG
+      fieldSpec: .spec.providerConfigRef.name
+    - header: SYNCED
+      fieldSpec: .status.conditions[?(@.type=='Synced')].status
+    - header: READY
+      fieldSpec: .status.conditions[?(@.type=='Ready')].status
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

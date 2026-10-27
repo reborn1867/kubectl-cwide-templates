@@ -1,0 +1,15 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: K8S
+      fieldSpec: .status.kubernetesVersion
+    - header: SHOOT
+      fieldSpec: .spec.shootName
+    - header: PROVIDER
+      fieldSpec: .spec.providerType
+    - header: REGION
+      fieldSpec: .spec.cloudRegion
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp
+    - header: STATE
+      fieldSpec: .status.state

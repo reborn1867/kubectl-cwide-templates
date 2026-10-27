@@ -1,0 +1,7 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: HOSTNAMES
+      fieldSpec: .spec.hostnames
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

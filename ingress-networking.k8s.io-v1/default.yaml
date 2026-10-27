@@ -1,0 +1,13 @@
+columns:
+    - header: NAME
+      fieldSpec: $_defaultPrinterField
+    - header: CLASS
+      fieldSpec: $_defaultPrinterField
+    - header: HOSTS
+      fieldSpec: $_defaultPrinterField
+    - header: ADDRESS
+      fieldSpec: $_defaultPrinterField
+    - header: PORTS
+      fieldSpec: $_defaultPrinterField
+    - header: AGE
+      fieldSpec: $_defaultPrinterField

@@ -1,0 +1,19 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: READYTOUSE
+      fieldSpec: .status.readyToUse
+    - header: RESTORESIZE
+      fieldSpec: .status.restoreSize
+    - header: DELETIONPOLICY
+      fieldSpec: .spec.deletionPolicy
+    - header: DRIVER
+      fieldSpec: .spec.driver
+    - header: VOLUMESNAPSHOTCLASS
+      fieldSpec: .spec.volumeSnapshotClassName
+    - header: VOLUMESNAPSHOT
+      fieldSpec: .spec.volumeSnapshotRef.name
+    - header: VOLUMESNAPSHOTNAMESPACE
+      fieldSpec: .spec.volumeSnapshotRef.namespace
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

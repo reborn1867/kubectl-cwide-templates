@@ -1,0 +1,25 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: SCALETARGETKIND
+      fieldSpec: .status.scaleTargetKind
+    - header: SCALETARGETNAME
+      fieldSpec: .spec.scaleTargetRef.name
+    - header: MIN
+      fieldSpec: .spec.minReplicaCount
+    - header: MAX
+      fieldSpec: .spec.maxReplicaCount
+    - header: READY
+      fieldSpec: .status.conditions[?(@.type=="Ready")].status
+    - header: ACTIVE
+      fieldSpec: .status.conditions[?(@.type=="Active")].status
+    - header: FALLBACK
+      fieldSpec: .status.conditions[?(@.type=="Fallback")].status
+    - header: PAUSED
+      fieldSpec: .status.conditions[?(@.type=="Paused")].status
+    - header: TRIGGERS
+      fieldSpec: .status.triggersTypes
+    - header: AUTHENTICATIONS
+      fieldSpec: .status.authenticationsTypes
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

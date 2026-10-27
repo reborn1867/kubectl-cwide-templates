@@ -1,0 +1,15 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: REFGROUP
+      fieldSpec: .spec.resourceRef.apiVersion
+    - header: REFKIND
+      fieldSpec: .spec.resourceRef.kind
+    - header: REFNAME
+      fieldSpec: .spec.resourceRef.name
+    - header: REFNAMESPACE
+      fieldSpec: .spec.resourceRef.namespace
+    - header: ACTIVE
+      fieldSpec: .status.active
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

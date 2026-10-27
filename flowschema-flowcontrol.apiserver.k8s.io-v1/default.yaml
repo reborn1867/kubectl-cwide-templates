@@ -1,0 +1,13 @@
+columns:
+    - header: NAME
+      fieldSpec: $_defaultPrinterField
+    - header: PRIORITYLEVEL
+      fieldSpec: $_defaultPrinterField
+    - header: MATCHINGPRECEDENCE
+      fieldSpec: $_defaultPrinterField
+    - header: DISTINGUISHERMETHOD
+      fieldSpec: $_defaultPrinterField
+    - header: AGE
+      fieldSpec: $_defaultPrinterField
+    - header: MISSINGPL
+      fieldSpec: $_defaultPrinterField

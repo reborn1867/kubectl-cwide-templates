@@ -1,0 +1,13 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: CONFIGMAP TARGET
+      fieldSpec: .spec.target.configMap.key
+    - header: SECRET TARGET
+      fieldSpec: .spec.target.secret.key
+    - header: SYNCED
+      fieldSpec: .status.conditions[?(@.type == "Synced")].status
+    - header: REASON
+      fieldSpec: .status.conditions[?(@.type == "Synced")].reason
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

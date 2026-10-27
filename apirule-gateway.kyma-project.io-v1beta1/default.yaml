@@ -1,0 +1,7 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: STATUS
+      fieldSpec: .status.APIRuleStatus.code
+    - header: HOST
+      fieldSpec: .spec.host

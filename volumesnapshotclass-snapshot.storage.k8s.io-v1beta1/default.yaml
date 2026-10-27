@@ -1,0 +1,9 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: DRIVER
+      fieldSpec: .driver
+    - header: DELETIONPOLICY
+      fieldSpec: .deletionPolicy
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

@@ -1,0 +1,7 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: BACKUPNAME
+      fieldSpec: .spec.backupName
+    - header: STATUS
+      fieldSpec: .status.phase

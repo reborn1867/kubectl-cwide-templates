@@ -1,0 +1,19 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: READYTOUSE
+      fieldSpec: .status.readyToUse
+    - header: SOURCEPVC
+      fieldSpec: .spec.source.persistentVolumeClaimName
+    - header: SOURCESNAPSHOTCONTENT
+      fieldSpec: .spec.source.volumeSnapshotContentName
+    - header: RESTORESIZE
+      fieldSpec: .status.restoreSize
+    - header: SNAPSHOTCLASS
+      fieldSpec: .spec.volumeSnapshotClassName
+    - header: SNAPSHOTCONTENT
+      fieldSpec: .status.boundVolumeSnapshotContentName
+    - header: CREATIONTIME
+      fieldSpec: .status.creationTime
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

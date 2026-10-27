@@ -1,0 +1,11 @@
+columns:
+    - header: NAME
+      fieldSpec: $_defaultPrinterField
+    - header: ADDRESSTYPE
+      fieldSpec: $_defaultPrinterField
+    - header: PORTS
+      fieldSpec: $_defaultPrinterField
+    - header: ENDPOINTS
+      fieldSpec: $_defaultPrinterField
+    - header: AGE
+      fieldSpec: $_defaultPrinterField

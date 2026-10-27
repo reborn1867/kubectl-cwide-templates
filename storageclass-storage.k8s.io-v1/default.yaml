@@ -1,0 +1,13 @@
+columns:
+    - header: NAME
+      fieldSpec: $_defaultPrinterField
+    - header: PROVISIONER
+      fieldSpec: $_defaultPrinterField
+    - header: RECLAIMPOLICY
+      fieldSpec: $_defaultPrinterField
+    - header: VOLUMEBINDINGMODE
+      fieldSpec: $_defaultPrinterField
+    - header: ALLOWVOLUMEEXPANSION
+      fieldSpec: $_defaultPrinterField
+    - header: AGE
+      fieldSpec: $_defaultPrinterField

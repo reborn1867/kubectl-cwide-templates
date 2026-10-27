@@ -1,0 +1,7 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: ENDPOINT
+      fieldSpec: .spec.connection.endpoint
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

@@ -1,0 +1,9 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: STATUS
+      fieldSpec: .status.phase
+    - header: AGE
+      fieldSpec: .status.startedAt
+    - header: MESSAGE
+      fieldSpec: .status.message

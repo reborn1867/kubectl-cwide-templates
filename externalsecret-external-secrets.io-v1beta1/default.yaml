@@ -1,0 +1,15 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: STORETYPE
+      fieldSpec: .spec.secretStoreRef.kind
+    - header: STORE
+      fieldSpec: .spec.secretStoreRef.name
+    - header: REFRESH INTERVAL
+      fieldSpec: .spec.refreshInterval
+    - header: STATUS
+      fieldSpec: .status.conditions[?(@.type=="Ready")].reason
+    - header: READY
+      fieldSpec: .status.conditions[?(@.type=="Ready")].status
+    - header: LAST SYNC
+      fieldSpec: .status.refreshTime

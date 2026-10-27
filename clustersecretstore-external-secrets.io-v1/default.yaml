@@ -1,0 +1,11 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp
+    - header: STATUS
+      fieldSpec: .status.conditions[?(@.type=="Ready")].reason
+    - header: CAPABILITIES
+      fieldSpec: .status.capabilities
+    - header: READY
+      fieldSpec: .status.conditions[?(@.type=="Ready")].status

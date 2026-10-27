@@ -1,0 +1,13 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: STATUS
+      fieldSpec: .status.phase
+    - header: SCHEDULE
+      fieldSpec: .spec.schedule
+    - header: LASTBACKUP
+      fieldSpec: .status.lastBackup
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp
+    - header: PAUSED
+      fieldSpec: .spec.paused

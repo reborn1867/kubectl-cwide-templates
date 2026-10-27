@@ -1,0 +1,13 @@
+columns:
+    - header: NAME
+      fieldSpec: $_defaultPrinterField
+    - header: AGE
+      fieldSpec: $_defaultPrinterField
+    - header: SIGNERNAME
+      fieldSpec: $_defaultPrinterField
+    - header: REQUESTOR
+      fieldSpec: $_defaultPrinterField
+    - header: REQUESTEDDURATION
+      fieldSpec: $_defaultPrinterField
+    - header: CONDITION
+      fieldSpec: $_defaultPrinterField

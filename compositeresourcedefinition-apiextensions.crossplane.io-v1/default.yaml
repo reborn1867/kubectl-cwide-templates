@@ -1,0 +1,9 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: ESTABLISHED
+      fieldSpec: .status.conditions[?(@.type=='Established')].status
+    - header: OFFERED
+      fieldSpec: .status.conditions[?(@.type=='Offered')].status
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

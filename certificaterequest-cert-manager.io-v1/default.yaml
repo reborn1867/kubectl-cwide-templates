@@ -1,0 +1,17 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: APPROVED
+      fieldSpec: .status.conditions[?(@.type=="Approved")].status
+    - header: DENIED
+      fieldSpec: .status.conditions[?(@.type=="Denied")].status
+    - header: READY
+      fieldSpec: .status.conditions[?(@.type=="Ready")].status
+    - header: ISSUER
+      fieldSpec: .spec.issuerRef.name
+    - header: REQUESTER
+      fieldSpec: .spec.username
+    - header: STATUS
+      fieldSpec: .status.conditions[?(@.type=="Ready")].message
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp

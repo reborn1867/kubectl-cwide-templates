@@ -1,0 +1,17 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: STATUS
+      fieldSpec: .status.phase
+    - header: STARTED
+      fieldSpec: .status.startTimestamp
+    - header: BYTES DONE
+      fieldSpec: .status.progress.bytesDone
+    - header: TOTAL BYTES
+      fieldSpec: .status.progress.totalBytes
+    - header: STORAGE LOCATION
+      fieldSpec: .spec.backupStorageLocation
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp
+    - header: NODE
+      fieldSpec: .status.node

@@ -1,0 +1,11 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: STATE
+      fieldSpec: .status.state
+    - header: RELEASE_STATUS
+      fieldSpec: .status.releaseStatus.status
+    - header: UPDATED_AT
+      fieldSpec: .status.releaseStatus.updatedAt
+    - header: REVISION
+      fieldSpec: .status.releaseStatus.revision

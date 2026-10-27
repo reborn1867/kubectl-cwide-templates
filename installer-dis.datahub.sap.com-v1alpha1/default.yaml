@@ -1,0 +1,9 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: SPEC-VERSION
+      fieldSpec: .spec.version
+    - header: CURRENT-VERSION
+      fieldSpec: .status.version
+    - header: STATE
+      fieldSpec: .status.state

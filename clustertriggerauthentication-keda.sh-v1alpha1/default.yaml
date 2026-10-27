@@ -1,0 +1,17 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: PODIDENTITY
+      fieldSpec: .spec.podIdentity.provider
+    - header: SECRET
+      fieldSpec: .spec.secretTargetRef[*].name
+    - header: ENV
+      fieldSpec: .spec.env[*].name
+    - header: FILEPATH
+      fieldSpec: .spec.filePath
+    - header: VAULTADDRESS
+      fieldSpec: .spec.hashiCorpVault.address
+    - header: SCALEDOBJECTS
+      fieldSpec: .status.scaledobjects
+    - header: SCALEDJOBS
+      fieldSpec: .status.scaledjobs

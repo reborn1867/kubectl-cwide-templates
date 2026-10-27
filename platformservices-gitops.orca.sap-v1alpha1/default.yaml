@@ -1,0 +1,13 @@
+columns:
+    - header: NAME
+      fieldSpec: .metadata.name
+    - header: SUSPENDED
+      fieldSpec: .status.conditions[?(@.type=="Suspended")].status
+    - header: SYNCED
+      fieldSpec: .status.conditions[?(@.type=='Synced')].status
+    - header: READY
+      fieldSpec: .status.conditions[?(@.type=='Ready')].status
+    - header: CONNECTION-SECRET
+      fieldSpec: .spec.writeConnectionSecretToRef.name
+    - header: AGE
+      fieldSpec: .metadata.creationTimestamp
